@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Simonetta&display=swap');
 .body{
     font-family: 'Simonetta', cursive;
+   /* background-color: #F9F9F9;*/
 }
 .header{
     display: flex;
@@ -10,8 +11,8 @@
     text-align: center;
 }
 .logoNutricao img{
-    width: 20vw;
-    height: 35vh;
+    width: 15vw;
+    height: 25vh;
 }
 
 .nav{
@@ -27,19 +28,20 @@
 }
 .nav a:hover{
     color: #413333;
+    font-size:1.9em;
 }
 .Pesquisa{
     width: 10%;
 }
 .Pesquisa img{
     width: 3vw;
-    height: 6vh;
+    height: 5vh;
 }
 
 .inicio{
     width: 50%;
     margin: 0 auto;
-    font: 1.8em 'Roboto', sans-serif;
+    font: 1.5em 'Roboto', sans-serif;
     line-height: 50px;
     text-align: justify;
     background-image: url('../img/article/avocado.png');
@@ -48,7 +50,6 @@
     background-repeat: no-repeat;
     color:black;
     font-weight: 550;
-    
 }
 .inicio p, .Nutricionista p{
     text-indent: 20px;
@@ -56,11 +57,26 @@
 .Nutricionista{
     width: 50%;
     margin: 0 auto;
-    font: 1.8em 'Roboto', sans-serif;
+    font: 1.5em 'Roboto', sans-serif;
     line-height: 50px;
     text-align: justify;
     font-weight: 550;
 }
+.contato{
+    width: 100%;
+}
+.sectionContato{
+    width: 50%;
+    margin: 0 auto;
+    font: 1.5em 'Roboto', sans-serif;
+    line-height: 50px;
+    text-align: justify;
+    border-bottom: solid 1px grey;
+}
+
+
+
+
 
 .footer{
     display: flex;
@@ -72,21 +88,23 @@
 }
 
 .LogosDev img{
-    width: 3vw;
-    height: 4.5vh;
+    width: 2vw;
+    height: 3vh;
     padding-right: 25px;
+}
+.LogosDev img:hover{
+    height: 3.5vh;
+    width: 2.5vw;
 }
 
 .DivInfoPlataforma{
     width: 50%;
-    border: solid 1px red;
     text-align: center;
 }
 
 .DivInfoPlataforma a, .DivInfoPlataforma p{
     text-decoration: none;
     color: rgb(124, 119, 119);
-    font: 1.1em 'Roboto', sans-serif;
 }
 
 .imgfootervegetais{
@@ -96,4 +114,49 @@
 .imgfootervegetais img{
     width:15vw;
     margin-top: -50px;
+}
+
+/*Página de consulta:*/
+.sectionPrincipalConsulta{
+    width: 100%;
+}
+.sectionPrincipalConsulta input, .sectionPrincipalConsulta label, .sectionPrincipalConsulta h1{
+    display: block;
+}
+.formConsulta{
+    width: 20vw;
+    font:1.3em 'Roboto', sans-serif;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.formConsulta input[type="text"], .formConsulta input[type="email"]{
+    width: 50%;
+}
+.formConsulta input{
+    height: 2.5vh;
+}
+.formConsulta label, .formConsulta h1, .formConsulta input{
+    margin-bottom:15px;
+}
+.formConsulta h1{
+    text-align: center;
+}
+.divConsultaCampoHora{
+    display: flex;
+    justify-content: space-between;
+}
+.divSexo{
+    display: flex;
+    justify-content: center;
+}
+.divSexo input, .divSexo label{
+    margin-left: 15px;
+}
+.formConsulta input[type="submit"]{
+    margin: 0 auto;
+    font-size: 0.8em;
+    background-color: #74DF8C;
+    border-radius:3px;
+    height: 3vh;
+    width: 4vw;
 }
