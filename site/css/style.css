@@ -133,6 +133,12 @@
     text-decoration: none;
     color: rgb(124, 119, 119);
 }
+.DivInfoPlataforma2{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
 
 .imgfootervegetais{
     width: 25%;
