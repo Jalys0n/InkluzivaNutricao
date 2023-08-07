@@ -54,14 +54,41 @@
 .inicio p, .Nutricionista p{
     text-indent: 20px;
 }
+
+
+
+
+
+
+.sectionNutricionista {
+    display: flex;
+    justify-content: center;
+}
 .Nutricionista{
-    width: 50%;
-    margin: 0 auto;
+    width: 30%;
     font: 1.5em 'Roboto', sans-serif;
     line-height: 50px;
     text-align: justify;
     font-weight: 550;
 }
+.sectionNutricionista img{
+    width: 20vw;
+    height: 58vh;
+    margin-left: -20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contato{
     width: 100%;
 }
