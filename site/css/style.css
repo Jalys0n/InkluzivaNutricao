@@ -128,13 +128,14 @@ margin-right: 5px;
 }
 .DevInfos{
     width: 25%;
-    text-align: center;  
+    text-align: center; 
 }
 
 .LogosDev img{
     width: 2vw;
     height: 3vh;
-    padding-right: 25px;
+    /*pensar se tem algo que alinha lá embaixo*/
+    margin-top: 100px;
 }
 .LogosDev img:hover{
     height: 3.5vh;
