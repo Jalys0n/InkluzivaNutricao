@@ -5,9 +5,10 @@
 }
 .header{
     display: flex;
+    width: 100%;
 }
 .logoNutricao{
-    width:30%;
+    width:20%;
     text-align: center;
 }
 .logoNutricao img{
@@ -17,8 +18,8 @@
 
 .nav{
     display: flex;
-    width: 60%;
-    justify-content: center;
+    width: 50%;
+    justify-content: right;
 }
 .nav a{
     font-size: 1.8em;
@@ -30,13 +31,10 @@
     color: #413333;
     font-size:1.9em;
 }
-.Pesquisa{
-    width: 10%;
+.ContainerPesquisa{
+    width: 30%;
 }
-.Pesquisa img{
-    width: 3vw;
-    height: 5vh;
-}
+
 
 .inicio{
     width: 50%;
@@ -95,23 +93,29 @@
 }
 .contato h2{
     font: 1em 'Roboto', sans-serif;
+    color: rgb(51, 47, 47);
+    text-decoration: underline;
 }
-.localizacao{
+.localizacao, .telefone{
     display: flex;
     justify-content: center;
 }
-.localizacao img{
+.localizacao img, .telefone img{
     /*Depois pensar se existe uma forma de centralizar verticalmente, para retirar esse padding top*/
 padding-top: 30px;  
 margin-right: 5px;
 }
-.localizacao a{
+.localizacao a, .telefone a{
     color: black;
     text-decoration: none;   
 }
-.localizacao a:hover{
+.localizacao a:hover, .telefone a:hover{
     color: rgb(168, 168, 172);
     font-size: 1.05em;
+}
+.telefone img{
+    width: 1.5vw;
+    height: 3vh;
 }
 
 
@@ -227,7 +231,6 @@ margin-right: 5px;
     font-size: 0.8em;
     color: white;
 }
-.obrigatorio{
-    color: red;
-    font-size: 20px;
-}
+/*
+    eu acho que vou colocar as medidas dos campos input do formulario em px pra tudo ter um tamanho fixo.
+*/
