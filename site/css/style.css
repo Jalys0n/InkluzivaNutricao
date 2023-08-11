@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Simonetta&display=swap');
+*{margin: 0;padding: 0; }
 .body{
     font-family: 'Simonetta', cursive;
    /* background-color: #F9F9F9;*/
@@ -6,20 +7,24 @@
 .header{
     display: flex;
     width: 100%;
+    height: 150px;
+    padding-top: 10px;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 .logoNutricao{
     width:20%;
     text-align: center;
 }
 .logoNutricao img{
-    width: 15vw;
-    height: 25vh;
+    width: 100%;
+    height: 250px;
 }
 
 .nav{
     display: flex;
     width: 50%;
-    justify-content: right;
+    justify-content:center;
 }
 .nav a{
     font-size: 1.8em;
@@ -33,6 +38,32 @@
 }
 .ContainerPesquisa{
     width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.inputSearch{
+    display: flex;
+    border: solid 1px rgb(187, 172, 172);
+    border-radius: 20px;
+    width: 30%;
+    height: 38px;
+}
+.inputSearch img{
+    width: 30px;
+    height: 30px;
+}
+.inputSearch input{
+    width: 60%;
+    height: auto;
+}
+.inputSearch input{
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+article,section{
+    margin-bottom: 25px;
 }
 
 
@@ -54,10 +85,6 @@
 }
 
 
-
-
-
-
 .sectionNutricionista {
     display: flex;
     justify-content: center;
@@ -70,8 +97,8 @@
     font-weight: 550;
 }
 .sectionNutricionista img{
-    width: 20vw;
-    height: 58vh;
+    width: 100%;
+    height: 500px;
     margin-left: -20px;
 }
 
@@ -93,8 +120,7 @@
 }
 .contato h2{
     font: 1em 'Roboto', sans-serif;
-    color: rgb(51, 47, 47);
-    text-decoration: underline;
+    color: rgb(0, 0, 0);
 }
 .localizacao, .telefone{
     display: flex;
@@ -136,14 +162,14 @@ margin-right: 5px;
 }
 
 .LogosDev img{
-    width: 2vw;
-    height: 3vh;
+    width: 40px;
+    height: 40px;
     /*pensar se tem algo que alinha lá embaixo*/
     margin-top: 100px;
 }
 .LogosDev img:hover{
-    height: 3.5vh;
-    width: 2.5vw;
+    height: 42px;
+    width: 42px;
 }
 
 .DivInfoPlataforma{
@@ -167,13 +193,14 @@ margin-right: 5px;
     text-align: right;
 }
 .imgfootervegetais img{
-    width:15vw;
+    width:300px;
     margin-top: -50px;
 }
 
 /*Página de consulta:*/
 .sectionPrincipalConsulta{
     width: 100%;
+    margin-bottom: 70px;
 }
 .sectionPrincipalConsulta input, .sectionPrincipalConsulta label, .sectionPrincipalConsulta h1{
     display: block;
@@ -192,7 +219,8 @@ margin-right: 5px;
 .formConsulta label, input{margin-bottom: 10px;}
 .formConsulta input{
     width: 80%;
-    height: 25px;
+    height: 28px;
+    text-align: left;
 }
 .divHoraData{
     display: flex;
@@ -201,13 +229,16 @@ margin-right: 5px;
     margin-right: 10px;
 }
 .divHoraData input{
-    width: 23.5%;
+    width: 23%;
 }
 .divSexo{
     display: flex;
     font-size: 1em;
     width: 100%;
     margin-bottom: 20px;
+}
+.divSexo input[type="radio"]{
+    height: 20px;
 }
 
 .pesoAltura{
@@ -221,6 +252,11 @@ margin-right: 5px;
     width: 21%;
     text-align: right;
 }
+textarea{
+    background-color: #eeebeb;
+    height: 70px;
+    width: 80%;
+}
 
 .formConsulta input[type="submit"]{
     width: 20%;
@@ -230,7 +266,89 @@ margin-right: 5px;
     height: 30px;
     font-size: 0.8em;
     color: white;
+    text-align: center;
+}
+/*pra falar pro usuário preencher! 
+<div class="erro">Campo obrigatório!</div>
+*/
+.erro{
+    color: red;
+    font-size: 0.8em;
 }
 /*
     eu acho que vou colocar as medidas dos campos input do formulario em px pra tudo ter um tamanho fixo.
 */
+
+/*-------------Começando media query----------*/
+
+
+@media (min-width:1200px) and (max-width: 1399px){
+    *{margin: 0;padding: 0; }
+    .logoNutricao{
+        width: 20%;
+    }
+    .nav a{ font-size: 1.3em;}
+    .inputSearch{
+        width: 60%;
+    }
+    .sectionNutricionista{
+        display: block;
+    }
+    .Nutricionista{
+        width: 50%;
+        margin: 0 auto;
+        line-height: 50px;
+        text-align: justify;
+        font-weight: 550;
+    }
+    .imgNutricionista{
+
+        width: 50%;
+        margin: 0 auto;
+    }
+    .imgNutricionista img{
+        width: 50%;
+        margin: 0 auto;
+        height: 350px;
+        padding-left: 150px;
+    }
+    .sectionContato h2, a,p{
+        font-size: 0.9em;
+    }
+    footer{
+        width: 100%;
+        font-size: 1.05em;
+    }
+    .DivInfoPlataforma2{
+        padding-bottom: 30px;
+    }
+    .imgfootervegetais img{
+        width: 200px;
+        height: 180px;
+    }
+
+    /*formatação da página consulta*/
+    .formConsulta{
+        font-size: 1.2em;
+        border: solid 1px red;
+        width: 25vw;
+    }
+    .formNome input, .formEmail input,textarea{
+        width: 90%;
+    }
+    .divHoraData input{
+        width: 21%;
+    }
+    .pesoAltura input{
+        width:19%;
+    }
+    .divSexo input[type="radio"]{
+        height: 20px;
+    }
+
+    .formConsulta input[type="submit"]{
+        width: 33%;
+        height: 33px;
+    }
+
+}
