@@ -1,0 +1,42 @@
+ <section class="sectionPrincipalConsulta">
+        <form action="" class="formConsulta">
+            <h1>Pré-cadastro</h1>
+            
+            <div class="formNome">
+                <label for="nomePaciente">Nome: </label>
+                <input type="text" id="nomePaciente" placeholder="Nome completo">
+                
+            </div>
+            
+            <div class="formEmail">
+                <label for="emailPaciente">Email: </label>
+                <input type="email" id="emailPaciente" placeholder="seu@email.com">
+            </div>
+                
+            <div class="divHoraData">
+                <label for="data">Data: </label>
+                    <input type="date" id="dataPreCadastro">
+                <label for="hora">Hora: </label>
+                    <input type="time" id="horaPreCadastro">
+            </div>
+            
+            <label>Sexo:</label>
+            <div class="divSexo">
+                    <label for="sexoMasculino">Masculino </label> <input type="radio" name="sexoMasculino" id="sexoMasculino">
+
+                    <label for="sexoFeminino">Feminino </label><input type="radio" name="sexoFeminino" id="sexoFeminino">
+            </div>
+        
+            <div class="pesoAltura">
+                <label for="peso">Peso:</label>
+                <input type="number" name="peso" id="pesoPCadastro" placeholder="kg">
+                <label for="Altura">Altura: </label>
+                <input type="number" name="altura" id="alturaPCadastro" placeholder="cm">
+            </div>
+            <label for="mensagemPaciente">Escreva para nós:</label>
+                <textarea name="mensagemPaciente" id="mensagemPCadastro" placeholder="Sinta-se à vontade para solicitar algo."></textarea>
+            
+            <input type="submit" name="botaoEnviar" id="botaoEnviar">
+
+        </form>
+    </section>
