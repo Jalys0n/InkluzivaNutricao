@@ -334,10 +334,14 @@ textarea{
     .formConsulta{
         font-size: 1.2em;
         width: 50%;
-        border: solid 1px red;
         margin: 0 auto;
         margin-top: 150px;
         margin-bottom: 200px;
+    }
+    .formConsulta input[type="submit"]{
+        width: 25%;
+        height: 33px;
+        font-size: 1.1em;
     }
 
 }
