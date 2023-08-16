@@ -28,6 +28,9 @@ app.get("/index", function(req,res){
 app.get("/PreCadastro", function(req,res){
     res.render('PreCadastro');
 })
+app.get("/header"),function(req,res){
+    res.render('header');
+}
 
 
 //puxando o css!

@@ -17,8 +17,8 @@
     text-align: center;
 }
 .logoNutricao img{
-    width: 100%;
-    height: 250px;
+    width: 80%;
+    height: 230px;
 }
 
 .nav{
@@ -49,8 +49,9 @@
     height: 38px;
 }
 .inputSearch img{
-    width: 30px;
-    height: 30px;
+    padding-top: 4px;
+    width: 28px;
+    height: 28px;
 }
 .inputSearch input{
     width: 60%;
@@ -147,10 +148,6 @@ margin-right: 5px;
 
 
 /*--------------------------------------------------*/
-
-
-
-
 
 .footer{
     display: flex;
@@ -282,12 +279,157 @@ textarea{
 /*-------------Começando media query----------*/
 
 
+
+@media (min-width:800px) and (max-width:1079px){
+    *{margin: 0;padding: 0;}
+    .logoNutricao{
+        width: 25%;
+    }
+    .logoNutricao img{ width: 100%}
+    .nav{ width: 50%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    }
+    
+    .nav a{
+        font-size: 1.1em;
+        padding: 0;
+    }
+    .nav a:hover{ font-size: 1.2em;}
+    .ContainerPesquisa{
+        width: 25%;
+    }
+    .inputSearch {
+        width: 70%;
+    }
+    .inicio{font-size: 1.3em;}
+    .sectionNutricionista{
+        display: block;
+        width: 100%;
+    }
+    .Nutricionista{
+        width: 50%;
+        margin: 0 auto;
+        font-size: 1.3em;
+    }
+    .imgNutricionista{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .sectionContato{
+        font-size: 1.3em;
+    }
+    .localizacao a, .telefone a{
+        font-size: 1em;
+        color: rgb(34, 28, 28);
+    }
+    .DivInfoPlataforma2{
+        display: block;
+    }
+    .DivInfoPlataforma2 p{padding-bottom: 10px;}
+    .imgfootervegetais img{
+        width: 100%;
+        padding-top: 80px;
+    }
+    .formConsulta{
+        font-size: 1.2em;
+        width: 50%;
+        border: solid 1px red;
+        margin: 0 auto;
+        margin-top: 150px;
+        margin-bottom: 200px;
+    }
+
+}
+@media (min-width: 1080px) and (max-width:1199px){
+   *{margin:0;padding:0;}
+   .logoNutricao{
+       width: 25%;
+   }
+   .nav a{font-size: 1.5em;}
+   .inputSearch{
+    width: 60%;
+   }
+   .inputSearch img{
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+   }
+   .article{
+    font-size: 1em;
+   }
+   .sectionNutricionista{
+       display: block;
+   }
+   .Nutricionista{
+        width: 50%;
+        margin: 0 auto;
+        line-height: 50px;
+        text-align: justify;
+        font-weight: 550;
+    }
+    .imgNutricionista{
+
+        width: 50%;
+        margin: 0 auto;
+    }
+    .imgNutricionista img{
+        width: 50%;
+        margin: 0 auto;
+        height: 350px;
+        padding-left: 150px;
+    }
+    .localizacao {
+        font-size: 0.5em;
+    }
+    .localizacao p{ font-size: 1.5em;}
+   
+    .telefone p{
+        font-size: 0.9em;
+    }
+    .DivInfoPlataforma2{
+    display: inline-block;
+    justify-content: space-between;
+    text-align: center;
+}
+.DivInfoPlataforma2 p{padding-bottom: 10px;}
+    .LogosDev img{ width: 33px;}
+    .imgfootervegetais img{
+        width: 90%;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .formConsulta{
+        font-size: 1.2em;
+        width: 25vw;
+    }
+    .formNome input, .formEmail input,textarea{
+        width: 90%;
+    }
+    .divHoraData input{
+        width: 21%;
+    }    
+    .pesoAltura input{
+        width:19%;
+    }
+    .divSexo input[type="radio"]{
+        height: 20px;
+    }
+
+    .formConsulta input[type="submit"]{
+        width: 33%;
+        height: 33px;
+    }
+}
+
+
 @media (min-width:1200px) and (max-width: 1399px){
-    *{margin: 0;padding: 0; }
+    *{margin: 0;padding: 0;}
     .logoNutricao{
         width: 20%;
     }
-    .nav a{ font-size: 1.3em;}
+    .nav a{font-size: 1.3em;}
     .inputSearch{
         width: 60%;
     }
@@ -330,6 +472,7 @@ textarea{
     /*formatação da página consulta*/
     .formConsulta{
         font-size: 1.2em;
+        border: solid 1px red;
         width: 25vw;
     }
     .formNome input, .formEmail input,textarea{
@@ -349,5 +492,4 @@ textarea{
         width: 33%;
         height: 33px;
     }
-
 }

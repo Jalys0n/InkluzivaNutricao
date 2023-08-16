@@ -4,7 +4,7 @@ class PreCadastro{
     this.InserirDadosPreCadastro();
 }
     InserirDadosPreCadastro(){
-        const sql = 'Insert into PreCadastro(nome,email,datareq, hora, sexo, peso, messagem) values ("José", "josealysoncosta@gmail.com", "2023-08-14", "09:58:00", "M", 80, "Teste de mensagem")';
+        const sql = 'Insert into PreCadastro(nome,email,datareq, hora, sexo, peso, messagem) values (?,?,?,?,?,?,?)';
         this.connection.query(sql, (erro,retorno) => {
             if(erro){
                 console.log(erro);
