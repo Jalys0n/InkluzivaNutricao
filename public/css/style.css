@@ -317,24 +317,71 @@ textarea{
         /*so dei display flex para que a imagem ficasse centralizada*/
     }
     .imgNutricionista img{
-        width: 50%;
+        width: 60%;
     }
     .footer{
         width: 100%;
-        border: solid 1px red;
         display: block;
         margin: 0;
         padding: 0;
     }
     .DevInfos{
         width: 100%;
-        border: solid 1px green;
         margin: 0 auto;
         padding: 0; margin: 0;
     }    
     .sectionContato h1, .sectionContato h2,.localizacao a,.telefone a{ 
         font-size: 1em;}
+        /*
+        problemas na div de logos
+        */    
+        .footer{
+            width: 100%;
+            height: auto;
+        }
+        .DevInfos{
+            width: 100%;
+            height: 100px;
+            margin-bottom: 50px;
+        }
+        .LogosDev{
+            width: 100%;
+            height: auto;
+        }
+
+        .DivInfoPlataforma{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .DivInfoPlataforma2{
+            display: block;
+            font-size: 1em;
+        }
+        .DivInfoPlataforma2 p{
+            padding-bottom: 10px;
+        }
+        .imgfootervegetais{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .imgfootervegetais img{
+            width:20%;
+            height: 80px;
+        }
+
+
+    .sectionPrincipalConsulta{
+        width: 100%;
+        margin: 0;
+    }
+    .formConsulta{
+        width: 50%;
+    }
     
+    
+    
+
 }
 @media(min-width:643px) and (max-width:799px){
     /*a configuração da header não é fixa, pois quero fazer um menu hamburguer*/
@@ -404,7 +451,6 @@ textarea{
             padding-top: 80px;
         }
         .formConsulta{
-            border: solid 1px green;
             width: 40%;
         }
             
