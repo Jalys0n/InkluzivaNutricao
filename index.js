@@ -22,10 +22,10 @@ app.get('/', (req,res) =>{
 });
 
 //rota pras páginas
-app.get("/index", function(req,res){
+app.get("/inicio", function(req,res){
     res.render('main.handlebars');
 });
-app.get("/PreCadastro", function(req,res){
+app.get("/Contate-nos", function(req,res){
     res.render('PreCadastro');
 })
 app.get("/header"),function(req,res){
