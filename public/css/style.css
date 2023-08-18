@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Simonetta&display=swap');
-*{margin: 0;padding: 0; }
+*{margin: 0;padding: 0;};
 .body{
     font-family: 'Simonetta', cursive;
    /* background-color: #F9F9F9;*/
@@ -278,7 +278,137 @@ textarea{
 
 /*-------------Começando media query----------*/
 
-
+@media(min-width:500px) and (max-width:642px){
+    *{margin: 0;padding: 0;}
+    .header{
+        display:block;
+        width: 100%;
+        height: auto;
+        height:350px;
+    }
+    .logoNutricao{width: 100%;}
+    .logoNutricao img{width: 50%;}
+    .nav{width: 100%; margin-bottom: 25px;}
+    .nav a{ font-size: 1.5em;}
+    .ContainerPesquisa{
+        width: 100%;
+    }
+    .inputSearch{
+        width: 30%;
+        margin: 0 auto;
+    }
+    .imgfootervegetais img{
+        width: 30px;
+        height: 30px;
+    }
+    .article, .sectionNutricionista{
+        display: block;
+        width: 100%;
+    }
+    .inicio, .Nutricionista{
+        width: 70%;
+        margin: 0 auto;
+        font-size: 1.3em;
+    }
+    .imgNutricionista {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /*so dei display flex para que a imagem ficasse centralizada*/
+    }
+    .imgNutricionista img{
+        width: 50%;
+    }
+    .footer{
+        width: 100%;
+        border: solid 1px red;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .DevInfos{
+        width: 100%;
+        border: solid 1px green;
+        margin: 0 auto;
+        padding: 0; margin: 0;
+    }    
+    .sectionContato h1, .sectionContato h2,.localizacao a,.telefone a{ 
+        font-size: 1em;}
+    
+}
+@media(min-width:643px) and (max-width:799px){
+    /*a configuração da header não é fixa, pois quero fazer um menu hamburguer*/
+    *{margin: 0; padding: 0;}
+    .header{
+        display: block;
+        margin-bottom: 250px;
+    }
+    .logoNutricao{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .nav{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+    }
+    .nav a{
+        padding: 0;
+        margin-left: 65px;
+    }
+    .ContainerPesquisa{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .inputSearch{
+        width:60%;
+        height: 33px;
+        margin: 0 auto;
+    }
+    #inputPesquisa::placeholder{
+        font-size: 1.1em;
+    }
+    .inputSearch img{
+        width: 30px;
+        height: 26px;
+    }
+    .sectionNutricionista{
+        display: block;
+    }
+    .Nutricionista{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .imgNutricionista{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .sectionContato{
+    font-size: 1.4em;}
+        .DivInfoPlataforma{
+            font-size: 1em;
+        }
+        .DivInfoPlataforma2{
+            display: block;
+            justify-content: inline-block;
+            text-align: center;
+        }
+        .DivInfoPlataforma2 p{
+            padding-bottom: 5px;
+        }
+        .imgfootervegetais img{
+            width: 90%;
+            padding-top: 80px;
+        }
+        .formConsulta{
+            border: solid 1px green;
+            width: 40%;
+        }
+            
+    }
 
 @media (min-width:800px) and (max-width:1079px){
     *{margin: 0;padding: 0;}
@@ -476,7 +606,6 @@ textarea{
     /*formatação da página consulta*/
     .formConsulta{
         font-size: 1.2em;
-        border: solid 1px red;
         width: 25vw;
     }
     .formNome input, .formEmail input,textarea{

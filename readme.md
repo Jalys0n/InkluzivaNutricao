@@ -8,4 +8,5 @@
     <li>NODE.JS</li>
     <li>MYSQL</li>
     <li>EXPRESS</li>
+    <li>HANDLEBARS</li>
 </ul>

@@ -1,1 +1,5 @@
 não enviar dados do banco de dados para o github!
+
+no footer da configuracao min 500px max 642px nao to conseguindo arrumar... especificamente
+nas logos do ig, linkedin, github...
+
