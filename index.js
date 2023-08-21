@@ -19,7 +19,7 @@ app.listen(port,() =>{
 
 //renderizando o main.handlebars
 app.get('/',(req,res) =>{
-    res.render('layouts/main',{
+    res.render('Home',{
         tituloPagina:'Nutrição com Devoção'
     });
 })
