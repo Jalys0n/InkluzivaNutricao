@@ -28,7 +28,6 @@ function validaPreCadastro(){
     if(hora==""){
         alert("O campo hora é obrigatório!");
     }
-
     if(sexo==""){
         alert("Deve-se preencher o campo referente ao sexo!");
     }

@@ -4,6 +4,7 @@ const PreCadastro = require('../database/PreCadastro');*/
 const app = express();
 const port = 3000;
 const handlebars = require('express-handlebars');
+const path = require('path');
 //PreCadastro.init(conexao);
 
 //Config do template 
@@ -17,28 +18,29 @@ app.listen(port,() =>{
 
 
 //renderizando o main.handlebars
-app.get('/', (req,res) =>{
-    res.render('main.handlebars');
-});
+app.get('/',(req,res) =>{
+    res.render('layouts/main',{
+        tituloPagina:'Nutrição com Devoção'
+    });
+})
 
 //rota pras páginas
-app.get("/inicio", function(req,res){
-    res.render('main.handlebars');
-});
-app.get("/Contate-nos", function(req,res){
-    res.render('PreCadastro');
+app.get('/Contato', function(req,res){
+    res.render('Consulta',{
+        tituloPagina:'Consulta'
+    });
 })
-app.get("/header"),function(req,res){
-    res.render('header');
-}
 
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 //puxando o css!
 app.use('/public', express.static (__dirname + '/public'));
 
 //acredito q, para imagens, vai ser da mesma forma
-app.use('/public', express.static(__dirname + '/public/img'))
+app.use('/public', express.static(__dirname + '/public'))
 
+app.use('/public', express.static(__dirname + '/public'))
 
 /*
       Sem renderizar, mandando os arquivos htmls para o servidor 
