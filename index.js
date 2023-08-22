@@ -1,6 +1,9 @@
+//preciso consertar isso e importar função corretamente
+//const funcaovalida = require('public/js/validaPreCadastro')
+
 const express = require ('express');
-/*const conexao = require('../database/connection');
-const PreCadastro = require('../database/PreCadastro');*/
+const conexao = require('./database/connection.js');
+const PreCadastro = require('./database/PreCadastro.js');
 const app = express();
 const port = 3000;
 const handlebars = require('express-handlebars');
@@ -29,6 +32,15 @@ app.get('/Contato', function(req,res){
     res.render('Consulta',{
         tituloPagina:'Consulta'
     });
+})
+
+/*formulario*/
+app.post('/situacao-cadastro', function(req,res){
+    if(validaPreCadastro!=false){
+        res.send("Formulário enviado com sucesso!");
+    } else{
+        res.send("Erro ao enviar formulário!");
+    }
 })
 
 

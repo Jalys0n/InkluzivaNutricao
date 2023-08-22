@@ -3,4 +3,5 @@
 *no footer da configuracao min 500px max 642px nao to conseguindo arrumar... especificamente
 nas logos do ig, linkedin, github...
 
-*Configurar rotas no nav
+*ver sobre função para validar dados, como importar/chamar corretamente tanto no arquivo html quanto para o index para fazer aquela 
+config antes de enviar os dados

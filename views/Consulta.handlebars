@@ -8,7 +8,7 @@
 </head>
 <body>
     <section class="sectionPrincipalConsulta">
-        <form action="" class="formConsulta" onsubmit="campoObrigatorio()">
+        <form action="/situacao-cadastro" method="post" class="formConsulta" onsubmit="campoObrigatorio()">
             <h1>Pré-cadastro</h1>
             
             <div class="formNome">
@@ -23,9 +23,9 @@
             </div>
                 
             <div class="divHoraData">
-                <label for="data">Data: </label>
+                <label for="dataPreCadastro">Data: </label>
                     <input type="date" id="dataPreCadastro">
-                <label for="hora">Hora: </label>
+                <label for="horaPreCadastro">Hora: </label>
                     <input type="time" id="horaPreCadastro">
             </div>
             
@@ -37,13 +37,13 @@
             </div>
         
             <div class="pesoAltura">
-                <label for="peso">Peso:</label>
-                <input type="number" name="peso" id="pesoPCadastro" placeholder="kg">
-                <label for="Altura">Altura: </label>
-                <input type="number" name="altura" id="alturaPCadastro" placeholder="cm">
+                <label for="pesoPCadastro">Peso:</label>
+                <input type="text" inputmode="numeric" name="pesoPCadastro" id="pesoPCadastro" placeholder="kg">
+                <label for="alturaPCadastro">Altura: </label>
+                <input type="text" inputmode="numeric" name="alturaPCadastro" id="alturaPCadastro" placeholder="cm">
             </div>
-            <label for="mensagemPaciente">Escreva para nós:</label>
-                <textarea name="mensagemPaciente" id="mensagemPCadastro" placeholder="Sinta-se à vontade para solicitar algo."></textarea>
+            <label for="mensagemPCadastro">Escreva para nós:</label>
+                <textarea name="mensagemPCadastro" id="mensagemPCadastro" placeholder="Sinta-se à vontade para solicitar algo."></textarea>
             
             <input type="submit" name="botaoEnviar" id="botaoEnviar">
         </form>
