@@ -34,6 +34,12 @@ app.get('/Contato', function(req,res){
     });
 })
 
+app.get('/Dados', function(req,res){
+    res.render('Dados',{
+        tituloPagina:'Dados'
+    })
+})
+
 /*formulario*/
 app.post('/situacao-cadastro', function(req,res){
     if(validaPreCadastro!=false){

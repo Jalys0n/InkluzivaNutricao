@@ -275,6 +275,23 @@ textarea{
 /*
     eu acho que vou colocar as medidas dos campos input do formulario em px pra tudo ter um tamanho fixo.
 */
+/*Começo da página dados para consultar dados*/
+.divDados{
+    width: 100%;
+    height: 500px;
+    background-color: red;
+    margin-bottom: 50px;
+}
+.dadosescritos{
+    margin: 0 auto;
+    width: 25%;
+    height: auto;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 17px;
+}
+.dadosescritos p{text-align: justify;}
+
 
 /*-------------Começando media query----------*/
 
