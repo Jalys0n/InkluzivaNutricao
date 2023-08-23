@@ -9,4 +9,5 @@
     <li>MYSQL</li>
     <li>EXPRESS</li>
     <li>HANDLEBARS</li>
+    <li>BODY PARSER</li>
 </ul>

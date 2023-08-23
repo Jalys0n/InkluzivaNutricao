@@ -17,7 +17,7 @@
     text-align: center;
 }
 .logoNutricao img{
-    width: 80%;
+    width: 85%;
     height: 230px;
 }
 
@@ -34,7 +34,7 @@
 }
 .nav a:hover{
     color: #413333;
-    font-size:1.9em;
+    font-size:1.8em;
 }
 .ContainerPesquisa{
     width: 30%;

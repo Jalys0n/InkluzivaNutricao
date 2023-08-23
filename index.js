@@ -8,6 +8,7 @@ const app = express();
 const port = 3000;
 const handlebars = require('express-handlebars');
 const path = require('path');
+const bodyParser = require('body-parser');
 //PreCadastro.init(conexao);
 
 //Config do template 
@@ -42,13 +43,13 @@ app.get('/Dados', function(req,res){
 
 /*formulario*/
 app.post('/situacao-cadastro', function(req,res){
-    if(validaPreCadastro!=false){
-        res.send("Formulário enviado com sucesso!");
-    } else{
-        res.send("Erro ao enviar formulário!");
-    }
-})
-
+        
+        res.send('<script>alert("Formulário enviado com sucesso!")</script>');
+    })
+    
+//body-parser
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
