@@ -9,7 +9,7 @@ class Nutricionista{
             if(erro){
                 console.log(erro);
             } else{
-                console.log("Os dados foram inseridos");
+                console.log("Os dados do nutricionista foram inseridos");
             }
         })
     }

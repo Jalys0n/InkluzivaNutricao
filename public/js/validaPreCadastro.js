@@ -1,4 +1,4 @@
-const validaPreCadastro = function validaPreCadastro(){
+const validacaoPreCadastro = function validaPreCadastro(){
     const nome = document.getElementById("nomePaciente").value;
     const email = document.getElementById("emailPaciente").value;
     const data = document.getElementById("dataPreCadastro").value;
@@ -13,4 +13,5 @@ const validaPreCadastro = function validaPreCadastro(){
         return true;
     }
 }
-module.exports = validaPreCadastro;
+
+module.exports = validacaoPreCadastro;
