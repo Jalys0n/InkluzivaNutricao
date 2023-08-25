@@ -4,12 +4,12 @@ class PreCadastro{
     this.InserirDadosPreCadastro();
 }
     InserirDadosPreCadastro(){
-        const sql = 'Insert into PreCadastro(nome,email,datareq, hora, sexo, peso, messagem) values (?,?,?,?,?,?,?)';
+        const sql = 'Insert into PreCadastro (nome,email,datareq, hora, sexo, peso, mensagem) values (?, ?, ?, ?, ?, ?, ?)';
         this.connection.query(sql, (erro,retorno) => {
             if(erro){
                 console.log(erro);
             } else{
-                console.log("Mensagem enviada com sucesso!");
+                console.log("Dados cadastrados com sucesso!");
             }
         })
     }

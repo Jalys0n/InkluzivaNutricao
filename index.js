@@ -44,7 +44,11 @@ app.get('/Dados', function(req,res){
 
 /*formulario*/
 app.post('/situacao-cadastro', function(req,res){
-        
+        const nome = req.body.nomePaciente;
+        const email = req.body.emailPaciente;
+        const date = req.body.dataPreCadastro;
+        const hora = req.body.horaPreCadastro;
+        const sexo = req.body.
         res.send('<script>alert("Formulário enviado com sucesso!")</script>');
     })
     

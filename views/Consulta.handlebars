@@ -8,12 +8,13 @@
 </head>
 <body>
     <section class="sectionPrincipalConsulta">
-        <form action="/situacao-cadastro" method="post" class="formConsulta">
+        <form action="/situacao-cadastro" method="get" class="formConsulta" onsubmit="testarvariavel()">
             <h1>Pré-cadastro</h1>
-            
+           <!--
+             
             <div class="formNome">
                 <label for="nomePaciente">Nome: </label>
-                <input type="text" id="nomePaciente" placeholder="Nome completo">
+                <input type="text" id="nomePaciente" name="nomePaciente" placeholder="Nome completo">
                 
             </div>
             
@@ -24,26 +25,29 @@
                 
             <div class="divHoraData">
                 <label for="dataPreCadastro">Data: </label>
-                    <input type="date" id="dataPreCadastro">
+                    <input type="date" id="dataPreCadastro" name="dataPreCadastro">
                 <label for="horaPreCadastro">Hora: </label>
-                    <input type="time" id="horaPreCadastro">
+                    <input type="time" id="horaPreCadastro" name="horaPreCadastro">
             </div>
-            
+            -->
             <label>Sexo:</label>
-            <div class="divSexo">
-                    <label for="sexoMasculino">Masculino </label> <input type="radio" name="sexoMasculino" id="sexoMasculino">
+            <div class="divSexo" onfocus="testarvariavel()">
+                    <label for="sexoMasculino">Masculino </label> <input type="radio" name="sexoMasculino" id="sexoMasculino" value="sexoMasculino">
 
-                    <label for="sexoFeminino">Feminino </label><input type="radio" name="sexoFeminino" id="sexoFeminino">
+                    <label for="sexoFeminino">Feminino </label><input type="radio" name="sexoFeminino" id="sexoFeminino" value="sexoFeminino">
             </div>
-        
-            <div class="pesoAltura">
+        <!--
+             <div class="pesoAltura">
                 <label for="pesoPCadastro">Peso:</label>
                 <input type="text" inputmode="numeric" name="pesoPCadastro" id="pesoPCadastro" placeholder="kg">
                 <label for="alturaPCadastro">Altura: </label>
                 <input type="text" inputmode="numeric" name="alturaPCadastro" id="alturaPCadastro" placeholder="cm">
             </div>
             <label for="mensagemPCadastro">Escreva para nós:</label>
-                <textarea name="mensagemPCadastro" id="mensagemPCadastro" placeholder="Sinta-se à vontade para solicitar algo."></textarea>
+                <textarea name="mensagemPCadastro" id="mensagemPCadastro" valueplaceholder="Sinta-se à vontade para solicitar algo."></textarea>
+        -->
+
+           
             
             <input type="submit" name="botaoEnviar" id="botaoEnviar">
         </form>
