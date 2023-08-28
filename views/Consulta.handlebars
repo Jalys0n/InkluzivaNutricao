@@ -8,9 +8,8 @@
 </head>
 <body>
     <section class="sectionPrincipalConsulta">
-        <form action="/situacao-cadastro" method="get" class="formConsulta" onsubmit="testarvariavel()">
+        <form action="/situacao-cadastro" method="get" class="formConsulta" onsubmit="valida()">
             <h1>Pré-cadastro</h1>
-           <!--
              
             <div class="formNome">
                 <label for="nomePaciente">Nome: </label>
@@ -29,28 +28,24 @@
                 <label for="horaPreCadastro">Hora: </label>
                     <input type="time" id="horaPreCadastro" name="horaPreCadastro">
             </div>
-            -->
             <label>Sexo:</label>
-            <div class="divSexo" onfocus="testarvariavel()">
-                    <label for="sexoMasculino">Masculino </label> <input type="radio" name="sexoMasculino" id="sexoMasculino" value="sexoMasculino">
+            <div class="divSexo">
+                    <label for="sexoMasculino">Masculino </label> <input type="radio" name="genero" id="sexoMasculino" value="sexoMasculino">
 
-                    <label for="sexoFeminino">Feminino </label><input type="radio" name="sexoFeminino" id="sexoFeminino" value="sexoFeminino">
+                    <label for="sexoFeminino">Feminino </label><input type="radio" name="genero" id="sexoFeminino" value="sexoFeminino">
             </div>
-        <!--
              <div class="pesoAltura">
                 <label for="pesoPCadastro">Peso:</label>
-                <input type="text" inputmode="numeric" name="pesoPCadastro" id="pesoPCadastro" placeholder="kg">
+                <input type="number" inputmode="numeric" name="pesoPCadastro" id="pesoPCadastro" placeholder="kg">
                 <label for="alturaPCadastro">Altura: </label>
-                <input type="text" inputmode="numeric" name="alturaPCadastro" id="alturaPCadastro" placeholder="cm">
+                <input type="number" inputmode="numeric" name="alturaPCadastro" id="alturaPCadastro" placeholder="cm">
             </div>
             <label for="mensagemPCadastro">Escreva para nós:</label>
                 <textarea name="mensagemPCadastro" id="mensagemPCadastro" valueplaceholder="Sinta-se à vontade para solicitar algo."></textarea>
-        -->
-
-           
+                  
             
             <input type="submit" name="botaoEnviar" id="botaoEnviar">
         </form>
-    </section>
-</body>
+        </section>
+    </body>
 </html>

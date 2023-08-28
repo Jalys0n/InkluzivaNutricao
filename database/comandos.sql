@@ -6,7 +6,7 @@ create table PreCadastro(
     hora time, 
     sexo char, 
     peso float,
-    messagem varchar(200),
+    mensagem varchar(200),
     PRIMARY_KEY(id)
 );
 
@@ -19,7 +19,6 @@ create table PreCadastro(
 
 /*comando pra quando eu for inserir dados na tabela*/
  const sql = 'Insert into PreCadastro(nome,email,datareq, hora, sexo, peso, mensagem) values (?,?,?,?,?,?,?)';
-
 
  /*ideia de comando futuro para trazer os dados das tabelas*/
  const sql = 'select nome, email, datareq, hora, sexo, peso, messagem from PreCadastro';

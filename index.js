@@ -1,9 +1,7 @@
 //preciso consertar isso e importar função corretamente
-//const funcaovalida = require('public/js/validaPreCadastro')
 
 const express = require ('express');
 const conexao = require('./database/connection.js');
-const PreCadastro = require('./database/PreCadastro.js');
 const app = express();
 const port = 3000;
 const handlebars = require('express-handlebars');
@@ -44,12 +42,7 @@ app.get('/Dados', function(req,res){
 
 /*formulario*/
 app.post('/situacao-cadastro', function(req,res){
-        const nome = req.body.nomePaciente;
-        const email = req.body.emailPaciente;
-        const date = req.body.dataPreCadastro;
-        const hora = req.body.horaPreCadastro;
-        const sexo = req.body.
-        res.send('<script>alert("Formulário enviado com sucesso!")</script>');
+        res.send('Formulário enviado com sucesso!');
     })
     
 //body-parser
