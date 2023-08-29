@@ -1,12 +1,11 @@
 const express = require ('express');
-const conexao = require('./database/connection.js');
+const connection = require('./database/connection.js');
 const app = express();
 const port = 3000;
 const handlebars = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
 const PreCadastro = require('./database/PreCadastro.js');
-
 
 //Config do template 
     app.engine('handlebars', handlebars.engine({defaultLayout:'main'}));
@@ -16,6 +15,12 @@ const PreCadastro = require('./database/PreCadastro.js');
 app.listen(port,() =>{
     console.log(`Servidor rodando na porta ${port}, http://localhost:3000/`);
 })
+
+
+
+//body-parser
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 
 //renderizando o main.handlebars
@@ -39,37 +44,28 @@ app.get('/Dados', function(req,res){
 })
 
 /*formulario*/
-app.post('/situacaoCadastro', function (req, res) {
-    const formulario = formulario.req.body;
-    const PreCadastroinstancia = new PreCadastro(conexao);
+app.post('/situacaoCadastro', function (req, res) {    
+    const nome = req.body.nomePaciente;
+    const email = req.body.emailPaciente;
+    const data = req.body.dataPreCadastro;
+    const hora = req.body.horaPreCadastro;
+    const genero = req.body.genero;
+    const peso = req.body.pesoPCadastro;
+    const altura = req.body.alturaPCadastro;
+    const mensagem = req.body.mensagemPCadastro;
 
-    const nome = formulario.nomePaciente;
-    const email = formulario.emailPaciente;
-    const data = formulario.dataPreCadastro;
-    const hora = formulario.horaPreCadastro;
-    const genero = formulario.genero;
-    const peso = formulario.pesoPCadastro;
-    const altura = formulario.alturaPCadastro;
-    const mensagem = formulario.mensagemPCadastro;
-
-    const dadosFormulario = { nome, email, data, hora, genero, peso, altura, mensagem };
-
-    PreCadastroinstancia.InserirDadosPreCadastro(dadosFormulario, (error, results) => {
-        if (error) {
-            console.log('Erro:', error);
-            res.send('Não foi possível realizar a operação');
-        } else {
-            console.log('Dados cadastrados com sucesso:', results);
-            res.send('Formulário enviado com sucesso!');
+    PreCadastro.InserirDadosPreCadastro(nome, email, data, hora, genero, peso, altura, mensagem, (error, results) => {
+        if(error){
+            res.send('Não foi possível enviar dados.');
+        } else{
+            res.send('Dados cadastrados.');
         }
     });
 });
         
 
     
-//body-parser
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
