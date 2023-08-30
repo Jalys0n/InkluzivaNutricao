@@ -55,11 +55,10 @@ app.post('/situacaoCadastro', function (req, res) {
     const mensagem = req.body.mensagemPCadastro;
 
     Precadastro1.InserirDadosFormulario(nome, email, data, hora, genero, peso, mensagem); 
-
+    
     res.send("<script>alert('Dados inseridos com sucesso')</script>");
 });
 
-        
 
     
 
