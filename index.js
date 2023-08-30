@@ -6,6 +6,7 @@ const handlebars = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
 const PreCadastro = require('./database/PreCadastro.js');
+const Precadastro1 = new PreCadastro(connection);
 
 //Config do template 
     app.engine('handlebars', handlebars.engine({defaultLayout:'main'}));
@@ -44,24 +45,20 @@ app.get('/Dados', function(req,res){
 })
 
 /*formulario*/
-app.post('/situacaoCadastro', function (req, res) {    
+app.post('/situacaoCadastro', function (req, res) {
     const nome = req.body.nomePaciente;
     const email = req.body.emailPaciente;
     const data = req.body.dataPreCadastro;
     const hora = req.body.horaPreCadastro;
     const genero = req.body.genero;
     const peso = req.body.pesoPCadastro;
-    const altura = req.body.alturaPCadastro;
     const mensagem = req.body.mensagemPCadastro;
 
-    PreCadastro.InserirDadosPreCadastro(nome, email, data, hora, genero, peso, altura, mensagem, (error, results) => {
-        if(error){
-            res.send('Não foi possível enviar dados.');
-        } else{
-            res.send('Dados cadastrados.');
-        }
-    });
+    Precadastro1.InserirDadosFormulario(nome, email, data, hora, genero, peso, mensagem); 
+
+    res.send("<script>alert('Dados inseridos com sucesso')</script>");
 });
+
         
 
     

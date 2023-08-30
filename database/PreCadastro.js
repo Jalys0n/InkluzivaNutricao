@@ -1,17 +1,18 @@
-class PreCadastro{
-    init(connection){
-    this.connection = connection;
-    this.InserirDadosPreCadastro();
-}
-    InserirDadosPreCadastro(nome, email, datareq, hora, sexo, peso, mensagem){
-        const sql = 'Insert into PreCadastro (nome,email,datareq, hora, sexo, peso, mensagem) values (?, ?, ?, ?, ?, ?, ?)';
-        this.connection.query(sql, (erro,retorno) => {
-            if(erro){
+class PreCadastro {
+    constructor(connection) {
+        this.connection = connection;
+    }
+
+    InserirDadosFormulario(nome, email, data, hora, genero, peso, mensagem) {
+        const sql = 'INSERT INTO PreCadastro (nome, email, datareq, hora, sexo, peso, mensagem) VALUES (?, ?, ?, ?, ?, ?, ?)';
+        this.connection.query(sql, [nome, email, data, hora, genero, peso, mensagem], (erro, retorno) => {
+            if (erro) {
                 console.log(erro);
-            } else{
+            } else {
                 console.log("Dados cadastrados com sucesso!");
             }
-        })
+        });
     }
 }
-module.exports = new PreCadastro();
+
+module.exports = PreCadastro;
